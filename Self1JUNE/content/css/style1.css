@@ -2339,7 +2339,7 @@ ul.queRes li label span:first-child {
     border-radius: 3px;
     margin-right: 10px;
 }
-ul.queRes li {
+/* ul.queRes li {
     border: 1px solid #e1e3e3;
     background: #fff;
     padding: 12px 15px;
@@ -2352,8 +2352,28 @@ ul.queRes li {
     padding: 12px 15px;
     margin-bottom: 8px;
     border-radius: 3px;
+} */
+ul.queRes li input {
+    display: none;
 }
-
+ul.queRes label {
+    border: 1px solid #e1e3e3;
+    background: #fff;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+ul.queRes li input:checked + label {
+    background-color: #9241ff;
+    color: #fff;
+}
+ul.queRes li input:checked + label span:first-child {
+    color: #fff;
+    border-color: #fff !important;
+}
+ul.queRes li label {
+    cursor: pointer;
+}
 /* ul.queRes li:hover span:first-child {
     background: #9241ff;
     color: #fff;
@@ -2391,6 +2411,7 @@ ul.queRes li {
 ul.queRes li label{
  margin-left: 15px;
  cursor: pointer;
+ width: 100%;
 }
 /* end raido css */
 
@@ -3175,7 +3196,147 @@ background-color: transparent;
 =============================================== */
 
 
+/*  =============================================== 
+    Ncert-Quiz Test Series
+=============================================== */
+ul.tslContainer {
+    list-style-type: decimal;
+    padding-left: 35px !important;
+}
+.tslflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none !important;
+}
+.testSeriesList p {margin-bottom: 0;}
 
+.testSeriesList p:last-child {
+    background: #e4e4e6;
+    padding: 3px 12px;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.testSeriesList p:first-child {
+    font-size: 20px;
+}
+.tslSolAtt span {
+    border: 1px solid #9241ff;
+    background-color: transparent;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #9241ff;
+    text-decoration: none;
+    max-width: 115px;
+    width: 100%;
+}
+.tslSolAtt span {
+    border: 1px solid #9241ff;
+    background-color: transparent;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #9241ff;
+    text-decoration: none;
+    max-width: 115px;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    
+}
+.tslSolAtt span:first-child{
+    margin-right: 15px;
+}
+.tslSolAtt {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    text-align: center;
+}
+a.tslflex:hover span:last-child:hover {
+    background: #9241ff;
+    color: #fff;
+}
+a.tslflex span:first-child {
+    border-color: #fa6425;
+    color: #fa6425;
+}
+a.tslflex:hover .testSeriesList P:first-child {
+    color: #9241ff;
+    text-decoration: underline;
+}
+
+a.tslflex .testSeriesList p {
+    color: #000;
+}
+ul.tslContainer li {
+    margin: 8px 0;
+    border-bottom: 1px solid #e2e2e5;
+}
+.ncert_QuizRT.ncertQuizTestAttempt {
+    background: #f6f8fa;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    
+}
+ul.tslContainer li:last-child {
+    border: navajowhite;
+}
+@media (min-width:768px) and (max-width:991px){
+    .tslSolAtt{
+        width: 50%;
+    }
+    
+}
+@media (max-width:767px){
+    .testSeriesList {
+        width: 65%;
+    }
+    
+    .tslSolAtt {
+        width: 35%;
+    }
+    .ncertQuizTestWrapper .container {
+        padding: 0;
+    }
+    .ncertQuizHead {
+        padding: 0 15px;
+    }
+    
+    .ncert_QuizRT.ncertQuizTestAttempt {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    ul.tslContainer {
+        padding-left: 25px !important;
+    }
+    .tslSolAtt {
+        display: block;
+    }
+    a.tslflex .testSeriesList p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    a.tslflex .testSeriesList p:last-child {
+        font-size: 12px;
+    }
+    .tslSolAtt span {
+        font-size: 13px;
+        margin: 3px 0;
+        padding: 2px 0;
+    }
+}
+/*  =============================================== 
+    End Ncert-Quiz Test Series
+=============================================== */
 
 
 
