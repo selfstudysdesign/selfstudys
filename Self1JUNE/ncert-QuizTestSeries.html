@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="content/css/style.css">
     <link rel="stylesheet" href="content/css/style1.css">
 
-    
+
 </head>
 
 <body>
@@ -36,57 +36,148 @@
                     <!-- <span class="topHeader__mobileIcon" onclick="handleNavClick('open')">☰</span> -->
                     <span class="topHeader__mobileIcon" onclick="handleNavClick('open')"><a href="#;"><img
                                 src="content/images/menuIcon.png" alt="" style="width: 25px;"></a></span>
-                    <form action="" class="topHeader__searchBar">
-                        <input type="text" class="topHeader__searchBar--input" placeholder="What you wan to learn?"
-                            name="search">
-                        <button type="submit" class="topHeader__searchBar--btn"><i class="fa fa-search"></i></button>
-                    </form>
+                    <div class="searchLoginRT">
+                        <form action="" class="topHeader__searchBar">
+                            <input type="text" class="topHeader__searchBar--input" placeholder="What you wan to learn?"
+                                name="search">
+                            <button type="submit" class="topHeader__searchBar--btn"><i
+                                    class="fa fa-search"></i></button>
+                        </form>
+
+                        <!--  Login Button -->
+                        <div class="text-center mt-4 loginHeaderBtn">
+                            <span href="" class="LoginBtnI">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <a href="" class="btn btn-default btn-rounded mb-4 headerLS" data-toggle="modal"
+                                    data-target="#modalLoginForm">
+                                    Log In &frasl; </a>
+                                <a href="" class="btn btn-default btn-rounded mb-4 headerLS" data-toggle="modal"
+                                    data-target="#modalSignUpForm">
+                                    Sign Up </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- End Login Button -->
 
                     <!-- Login Popup -->
                     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog ncertLoginPopup" role="document">
                             <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                <div class="modal-header text-center modalLoginHead">
+                                    <h4 class="modal-title w-100 getStatPopup">Get Started with <img
+                                            src="content/images/logoLogin.png" alt=""> </h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body mx-3">
-                                    <div class="md-form mb-5">
-                                        <div class="text-center loginWithGoogle">
-                                            <a href="javascript:void(0)" class="google btn"><i
-                                                    class="fa fa-google fa-fw"></i> Login with Google+</a>
+                                    <div class="md-form mb-4 mb4">
+                                        <div class=" loginWithGoogle">
+                                            <a href="javascript:void(0)" class="form-control googleForm googleBtn ">
+                                                <img src="content/images/googleIcon.png" alt=""> <span
+                                                    class="text-center lwg">Login with Google</span></a>
                                         </div>
-                                        <div class="text-center loginWithEmail">
-
+                                        <div class="text-center mt-4 loginWithEmail">
+                                            <span>or login with email</span>
                                         </div>
                                     </div>
-                                    <div class="md-form mb-5 text-center">
-                                        <input type="text" placeholder="email" class="form-control" id="email" required>
+
+                                    <div class="md-form mb-3 text-center yourEmail">
+                                        <input type="text" placeholder="Your Email" class="form-control googleForm"
+                                            id="email" required>
                                     </div>
 
-                                    <div class="md-form mb-4">
-                                        <input type="password" name="password" id="password" class="form-control"
-                                            placeholder="Enter the password" />
+                                    <div class="md-form mb-3 eyePositon">
+                                        <input type="password" name="password" id="password"
+                                            class="form-control googleForm" placeholder="Your Password" />
                                         <i class="bi bi-eye-slash" id="togglePassword"></i>
                                     </div>
+                                    <div class="md-form mb-4">
+                                        <div class="loggedInForgetPass">
+                                            <label><input type="checkbox" checked="checked"> Keep me logged in</label>
+                                            <a href="#;">Forget password</a>
+                                        </div>
+                                    </div>
+                                    <div class="md-form mb-1">
+                                        <div class="text-center">
+                                            <a href="" class="form-control googleForm googleLogin">Log In</a>
+                                        </div>
+                                    </div>
+
 
                                 </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn btn-default">Login</button>
+                                <div class="mb-4 modal-footer d-flex justify-content-center dontHaveAcc">
+                                    Don't have an acccount yet? <a href="" class="dontHaveAccSignup">Sign Up</a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
+                    <!-- End Login Popup -->
+                    <!-- Signup Popup -->
+                    <div class="modal fade" id="modalSignUpForm" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog ncertLoginPopup" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-center modalLoginHead">
+                                    <h4 class="modal-title w-100 getStatPopup">Get Started with <img
+                                            src="content/images/logoLogin.png" alt=""> </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body mx-3">
+                                    <div class="md-form mb-4 mb4">
+                                        <div class=" loginWithGoogle">
+                                            <a href="javascript:void(0)" class="form-control googleForm googleBtn ">
+                                                <img src="content/images/googleIcon.png" alt=""> <span
+                                                    class="text-center lwg">Login with Google</span></a>
+                                        </div>
+                                        <div class="text-center mt-4 loginWithEmail">
+                                            <span>or login with email</span>
+                                        </div>
+                                    </div>
+                                    <div class="md-form mb-3 text-center firstLastN">
+                                        <input type="text" placeholder="First Name"
+                                            class="form-control googleForm flName" id="fname" required>
+                                        <input type="text" placeholder="Last Name"
+                                            class="form-control googleForm flName" id="lname" required>
+                                    </div>
+                                    <div class="md-form mb-3 text-center yourEmail">
+                                        <input type="text" placeholder="Your Email" class="form-control googleForm"
+                                            id="email" required>
+                                    </div>
 
-                    <div class="text-center">
-                        <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
-                            data-target="#modalLoginForm">
-                            Login </a>
+                                    <div class="md-form mb-3 eyePositon">
+                                        <input type="password" name="password" id="password"
+                                            class="form-control googleForm" placeholder="Your Password" />
+                                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                    </div>
+                                    <div class="md-form mb-5 eyePositon">
+                                        <input type="password" name="password" id="cpassword"
+                                            class="form-control googleForm" placeholder="Confirm Your Password" />
+                                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                    </div>
+
+                                    <div class="md-form mb-1">
+                                        <div class="text-center">
+                                            <a href="" class="form-control googleForm googleLogin">Sign Up</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="mb-4 modal-footer d-flex justify-content-center dontHaveAcc">
+                                    Already have an acccount? <a href="" class="dontHaveAccSignup"> Login</a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                     <!-- End Login Popup -->
+
 
                 </div>
             </div>
@@ -641,12 +732,12 @@
         const password = document.querySelector('#password');
 
         togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye / eye slash icon
-    this.classList.toggle('bi-eye');
-});
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye / eye slash icon
+            this.classList.toggle('bi-eye');
+        });
     </script>
 </body>
 
