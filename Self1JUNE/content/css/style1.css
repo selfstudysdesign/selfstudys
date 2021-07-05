@@ -45,6 +45,7 @@ body{
 .topHeader__searchBar {
       position: relative;
       width: 35%;
+      margin-right: 30px;
   }
 .topHeader__searchBar--input {
     border: none;
@@ -3202,6 +3203,7 @@ background-color: transparent;
 ul.tslContainer {
     list-style-type: decimal;
     padding-left: 35px !important;
+    padding-right: 20px;
 }
 .tslflex {
     display: flex;
@@ -3252,6 +3254,7 @@ ul.tslContainer {
     display: inline-block;
     
 }
+
 .tslSolAtt span:first-child{
     margin-right: 15px;
 }
@@ -3268,6 +3271,14 @@ a.tslflex:hover span:last-child:hover {
 a.tslflex span:first-child {
     border-color: #fa6425;
     color: #fa6425;
+}
+.tslSolAtt.st span {
+    color: #9241ff !important;
+    border-color: #9241ff !important;
+}
+.tslSolAtt.st span:hover{
+    background-color: #9241ff !important;
+    color: #fff !important;
 }
 a.tslflex:hover .testSeriesList P:first-child {
     color: #9241ff;
@@ -3290,6 +3301,178 @@ ul.tslContainer li {
 ul.tslContainer li:last-child {
     border: navajowhite;
 }
+.tslSolAtt span:last-child {
+    margin-right: 0;
+}
+/* Login Popup */
+.modal-dialog.ncertLoginPopup {
+    max-width: 400px;
+    margin: 1.75rem auto;
+}
+.modalLoginHead .close{
+    padding-top: 0px;
+    margin-top: -30px;
+    font-weight: unset;
+    font-size: 1.7rem;
+}
+.modalLoginHead .close:focus {
+    outline: unset;
+}
+.loginWithEmail {
+    text-transform: uppercase;
+    position: relative;
+    color: #9fa2a5;
+    font-size: 14px;
+}
+.loggedInForgetPass label {
+    cursor: pointer;
+    color: #0c1019;
+    font-size: 14px;
+}
+
+.loggedInForgetPass a {
+    font-size: 14px;
+    cursor: pointer;
+    color: #9fa2a5;
+}
+.loginWithEmail:before, .loginWithEmail:after {
+    content: " ";
+    display: inline-block;
+    /* border: 1px solid #ced4da; */
+    height: 1.1px;
+    max-width: 70px;
+    width: 100%;
+    background: #9fa2a5;
+    position: absolute;
+    top: 12px;
+}
+.loginWithEmail:before{
+    left: 0;
+}
+.loginWithEmail:after{
+    right: 0;
+    
+}
+.loginWithGoogle span {font-weight: 500;}
+.loggedInForgetPass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.googleForm:focus {
+    background-color: #fff;
+    /* border-color: #9241ff; */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.googleForm::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0c1019;
+    opacity: 1; /* Firefox */
+  }
+  
+.googleForm:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #0c1019;
+  }
+  
+.googleForm::-ms-input-placeholder { /* Microsoft Edge */
+    color: #0c1019;
+  }
+.eyePositon {
+    position: relative;
+}
+.eyePositon i {
+    position: absolute;
+    right: 11px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.googleBtn {
+    display: flex;
+    text-decoration: none;
+}
+.googleBtn:hover{
+    text-decoration: none;
+    color: #9241ff;
+}
+.googleLogin {
+    background: #9241ff;
+    color: #fff;
+}
+.googleLogin:hover{
+    opacity: 0.9;
+    color: #fff;
+    text-decoration: none;
+}
+.dontHaveAcc {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.lwg{
+    display: inline-block;
+    text-align: center !important;
+    width: calc(100% - 45px);
+}
+.modalLoginHead {
+    border: 0;
+    padding-top: 40px;
+}
+.modalLoginHead h4 {
+    font-size: 1.4rem;
+}
+.flName {
+    width: 48%;
+    display: inline-block;
+}
+.firstLastN {
+    display: flex;
+    justify-content: space-between;
+}
+/* End Login Popup */
+/* hedader search */
+.searchLoginRT {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.headerLS:first-child {
+    padding-right: 0;
+}
+
+.headerLS:last-child {
+    padding-left: 0;
+}
+.headerLS {
+    padding: 0;
+    color: #0c1019;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+a.LoginBtnI i {
+    margin-bottom: -17px;
+    display: inline-block;
+    color: #0c1019;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+a.LoginBtnI {
+    display: flex;
+    align-items: baseline;
+}
+.headerLS:focus {
+    box-shadow: unset;
+}
+span.LoginBtnI {
+    display: flex;
+    justify-content: space-between;
+}
+span.LoginBtnI i {
+    padding-right: 5px;
+}
+/* end hedader search */
 @media (min-width:768px) and (max-width:991px){
     .tslSolAtt{
         width: 50%;
@@ -3313,10 +3496,11 @@ ul.tslContainer li:last-child {
     
     .ncert_QuizRT.ncertQuizTestAttempt {
         padding-left: 0;
-        padding-right: 10px;
+        padding-right: 0px;
     }
     ul.tslContainer {
         padding-left: 25px !important;
+        padding-right: 10px;
     }
     .tslSolAtt {
         display: block;
@@ -3333,6 +3517,74 @@ ul.tslContainer li:last-child {
         margin: 3px 0;
         padding: 2px 0;
     }
+    .tslSolAtt span:first-child {
+        margin-right: 0;
+    }
+    /* login Popup */
+    .modal-dialog.ncertLoginPopup {
+        max-width: 300px;
+    }
+    .modalLoginHead h4 {
+        font-size: 1rem;
+    }
+    .modalLoginHead {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .loginWithGoogle span {
+        font-size: .9rem;
+    }
+    .loginWithEmail{
+        font-size: 13px;
+    }
+    .loginWithEmail:before, .loginWithEmail:after{
+        max-width: 44px;
+        top: 10px;
+    }
+    .loginWithEmail {
+        margin: 0px 0;
+    }
+    .modalLoginHead {
+        padding-bottom: 0;
+    }
+    .loginWithEmail {
+        margin-top: 15px !important;
+    } 
+    .mb4 {
+        margin-bottom: 15px !important;
+    }   
+    .loggedInForgetPass label{
+        font-size: 11px;
+    }
+    .dontHaveAcc{
+        margin: 0 20px;
+        font-size: 11px;
+    }
+    .dontHaveAccSignup{
+        color: #8b2be1;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    
+    .loggedInForgetPass a{
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+    /* End login Popup */
+    /* login header */
+    .headerLS {
+        display: none;
+    }
+    .loginHeaderBtn {
+        margin-top: 0 !important;
+    }
+    
+.topHeader .topHeader__searchBar {
+    width: 83%;
+    display: block;
+    margin-right: 5px;
+}
+    /*end login header */
 }
 /*  =============================================== 
     End Ncert-Quiz Test Series
