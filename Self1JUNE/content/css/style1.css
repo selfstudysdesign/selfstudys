@@ -3304,6 +3304,13 @@ ul.tslContainer li:last-child {
 .tslSolAtt span:last-child {
     margin-right: 0;
 }
+a.tslflex .tslSolAtt span:first-child:hover {
+    background: #fa6425 ;
+    color: #fff;
+}
+/* a.tslflex:hover .testSeriesList p:first-child {
+    color: #fa6425;
+} */
 /* Login Popup */
 .modal-dialog.ncertLoginPopup {
     max-width: 400px;
@@ -3570,6 +3577,7 @@ span.LoginBtnI i {
         font-size: 11px;
         margin-bottom: 8px;
     }
+   
     /* End login Popup */
     /* login header */
     .headerLS {
@@ -3588,6 +3596,21 @@ span.LoginBtnI i {
 }
 /*  =============================================== 
     End Ncert-Quiz Test Series
+=============================================== */
+
+/*  =============================================== 
+    Ncert-PDF 
+=============================================== */
+.pdfList {
+    list-style-type: decimal-leading-zero;
+}
+.pdflistContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  =============================================== 
+    End Ncert-PDF 
 =============================================== */
 
 
