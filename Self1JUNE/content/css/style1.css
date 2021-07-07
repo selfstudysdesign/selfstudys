@@ -2545,12 +2545,13 @@ ul.queRes li a span:first-child {
 
 
 /* the nav height will be set to the height in pixels that would have for default, using height:auto won't work but you can put that value in pixels creating the slide*/
-
+.QaMenu #check.active ~ nav{
+    height: auto;
+    background: #f7f8fa;
+}
 .QaMenu #check:checked ~ nav{
     height: auto;
     background: #f7f8fa;
-   
-
 }
 
 .QaMenu #check:checked ~ nav a{
@@ -2828,8 +2829,8 @@ background-color: transparent;
             top: 18px;
         }
         .QaMenu nav a{
-            padding-top: 0 !important;
-            font-size: 15px;
+            padding-bottom: 5px !important;
+            padding-top: 5px !important;
         }
         .QaMenu {
            
@@ -3280,6 +3281,11 @@ a.tslflex span:first-child {
     background-color: #9241ff !important;
     color: #fff !important;
 }
+.tslSolAtt.st span.active {
+    background-color: #9241ff !important;
+    color: #fff !important;
+}
+
 a.tslflex:hover .testSeriesList P:first-child {
     color: #9241ff;
     text-decoration: underline;
@@ -3296,6 +3302,8 @@ ul.tslContainer li {
     background: #f6f8fa;
     padding: 30px 15px;
     margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     
 }
 ul.tslContainer li:last-child {
@@ -3504,6 +3512,8 @@ span.LoginBtnI i {
     .ncert_QuizRT.ncertQuizTestAttempt {
         padding-left: 0;
         padding-right: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     ul.tslContainer {
         padding-left: 25px !important;
