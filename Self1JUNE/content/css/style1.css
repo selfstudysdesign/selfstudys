@@ -29,6 +29,9 @@ body{
   ==================================================================== */
   .containerTop {
     padding: 0px 5%;
+    position: relative;
+    float: left;
+    width: 100%;
 }
 .topHeader__mobileIcon, .navBar__closebtn, .navBar__logo {
     display: none;
@@ -3599,7 +3602,8 @@ span.LoginBtnI i {
     
 .topHeader .topHeader__searchBar {
     width: 83%;
-    display: block;
+    /* display: block; */
+    display: none;
     margin-right: 5px;
 }
     /*end login header */
@@ -3625,5 +3629,231 @@ span.LoginBtnI i {
 
 
 
+/*  =============================================== 
+    Ncert-Profile 
+=============================================== */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdownMenuButton {
+    color: #000;
+}
+.dropdown-item a {
+    color: #000;
+}
+.dropdownMenuButton:hover {
+    text-decoration: none;
+    color: #8b2be1;
+}
+.dropdown-Profile .dropdown-item:hover a {
+    color: #8b2be1;
+    text-decoration: none;
+}
+/* .dropdown-Profile .dropdown-item:focus, .dropdown-Profile .dropdown-item:active {
+    background-color: #8b2be1 !important;
+    color: #fff !important;
+} */
+.dropdown-Profile .dropdown-item.active, .dropdown-Profile .dropdown-item:active {
+    /* color: #fff; */
+    text-decoration: none;
+    background-color: transparent;
+}
+.dropdown-Profile .dropdown-item.active a, .dropdown-Profile .dropdown-item:active a{
+    color: #8b2be1;
+}
+.dropdown-Profile .dropdown-item:focus a, .dropdown-Profile .dropdown-item:active a{
+color: #fff !important;
+}
+.dropdownProfileHeader{
+    margin-top: 0 !important;
+}
+.dropdown-Profile {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 
+        0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown-Profile:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-Profile:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.bio-row p span:first-child {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    color: #989a99;
+}
+.bio-row p span:last-child {
+    width: 60%;
+    display: inline-block;
+}
+.profileDetailLT {
+    background: #f7f8fa;
+    padding: 35px 0;
+}
+.bio-row p span:first-child:after {
+    content: ":";
+    display: inline-block;
+    position: absolute;
+    left: 22%;}
+
+.bio-row p {
+    position: relative;
+    border-bottom: 1px solid #e2e2e5;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+.bio-row:last-child p {
+    border-bottom: 0;
+}
+.profileDetailLT h4 {
+    color: #434343;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.profileDetailLT p {
+    color: #7a7a7a;
+    margin-bottom: 6px;
+}
+
+.profileDetailLT h6 {
+    color: #7a7a7a;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.dropdownProfileHeader .dropdown-Profile .dropdown-menu.show{
+    /* right: -15px !important;  */
+    left: -40px !important;
+    border: 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+}
+.dropdown-Profile .dropdown-menu.show {
+    min-width: 9.5rem !important;
+}
+@media (min-width:576px) and (max-width:767px){
+    .ncertPw{
+        padding-top: 35px;
+    }
+    .bio-row p span:first-child, .bio-row p span:last-child, .profileDetailLT p{
+        font-size: .8rem;
+    }
+    .profileDetailLT h4{
+        font-size: 1.2rem;
+    }
+    .containerTop {
+        padding: 0px 2%;
+    }
+    #dropdownMenuButton img {
+        width: 23px;
+    }
+    
+    #dropdownMenuButton {
+        font-size: .7rem;
+    }
+    .profileDetailLT h6{
+        font-size: 1rem;
+    }
+    .dropdown-Profile .dropdown-menu.show{
+        /* left: -28px !important; */
+    }
+}
+@media (max-width:575px){
+    .pdL {
+        padding: 0;
+        padding-left: 15px;
+    }
+    .pdR {
+        padding-left: 30px !important;
+    }
+    .profileDetailLT img {
+        width: 110px;
+    }
+    .text-center.profileDetailLT {
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+    .dropdownProfileHeader .dropdown-Profile .dropdown-menu.show {
+        /* right: -15px !important; */
+        left: -10px !important;
+    }
+}
+/*  =============================================== 
+    End Ncert-Profile
+=============================================== */
 
 
+
+/*  =============================================== 
+     Ncert-EditProfile
+=============================================== */
+
+.radioGender {
+    display: flex;
+    flex-direction: column;
+}
+.editProfileForm .form-control {
+    color: #1d1d1d !important;
+}
+.editProfileForm .form-control::placeholder {
+    color: #1d1d1d !important;
+}
+.editProfileForm .form-control:-ms-input-placeholder {
+    color: #1d1d1d !important;
+}
+.editProfileForm .form-control::-ms-input-placeholder {
+    color: #1d1d1d !important;
+}
+.editProfileForm .txtareaColor::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #1d1d1d !important;
+   
+  }
+  
+.editProfileForm .txtareaColor:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #1d1d1d !important;
+  }
+  
+.editProfileForm .txtareaColor::-ms-input-placeholder { /* Microsoft Edge */
+    color: #1d1d1d !important;
+  }
+  .btnSaveEditP {background-color: #8b2be1;color: #fff;padding: 8px 50px;font-weight: 600;}
+  .editProfileForm .custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #8b2be1 !important;
+}
+.editProfileForm .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: unset !important;
+}
+/*  =============================================== 
+    End Ncert-EditProfile
+=============================================== */
