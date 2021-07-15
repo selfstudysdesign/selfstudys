@@ -3743,6 +3743,7 @@ color: #fff !important;
 .profileDetailLT p {
     color: #7a7a7a;
     margin-bottom: 6px;
+    text-align: center;
 }
 
 .profileDetailLT h6 {
@@ -3847,13 +3848,203 @@ color: #fff !important;
 .editProfileForm .txtareaColor::-ms-input-placeholder { /* Microsoft Edge */
     color: #1d1d1d !important;
   }
-  .btnSaveEditP {background-color: #8b2be1;color: #fff;padding: 8px 50px;font-weight: 600;}
+  .btnSaveEditP {background-color: #8b2be1;color: #fff;padding: 8px 50px;font-weight: 600; margin-bottom: 30px;}
   .editProfileForm .custom-radio .custom-control-input:checked~.custom-control-label::before {
     background-color: #8b2be1 !important;
 }
 .editProfileForm .custom-control-input:focus~.custom-control-label::before {
     box-shadow: unset !important;
 }
+form.form.editProfileForm label {
+    font-weight: 500;
+}
+.profileWrapperRow{
+    margin-right: 0;
+}
+
+
+
+/* Img UPload */
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto 30px;
+}
+/* .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+} */
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+.avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgUploadB {
+    max-width: 185px;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.imgUploadBtn {
+    background: #8b2be1;
+}
+
+.imgDeleteBtn {
+    background: #000;
+}
+@media (max-width:575px){
+    .row.bRow .col {width: 100%;display: block;}
+
+.row.bRow {
+    display: block;
+}
+.avatar-upload{
+    margin-top: 0;
+}
+}
+/* End Img Upload  */
 /*  =============================================== 
     End Ncert-EditProfile
+=============================================== */
+
+/*  =============================================== 
+     Ncert-ProfileEducation
+=============================================== */
+.profileEducatonNav {
+    justify-content: center;
+}
+.profileEducatonNav .nav-item .nav-link {
+    padding: 15px 0;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profileEducatonNav .nav-item {
+    text-align: center;
+    margin: 10px 5%;
+}
+/*  =============================================== 
+    End Ncert-ProfileEducation
+=============================================== */
+
+
+/*  =============================================== 
+     Profile Notification
+=============================================== */
+.npCustomNotification {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+.ccItem {
+    width: 44%;
+    background: #e4e4e6;
+    border-radius: 10px;
+}
+
+.ccFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ccItem a {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: #000;
+}
+.ccItem .custom-control-label {
+    margin-bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 0;
+    padding-left: 10px;
+}
+.ccItem .custom-control-label::before {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.ccItem .custom-control-label::after {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.ccItem:nth-child(3) {
+    width: 100%;
+}
+.ccItem .custom-control-label::before {
+    border: 1px solid #c0c6cc;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background: #8b2be1;
+}
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow:unset;
+}
+.custom-control-input:active~.custom-control-label::before {
+    
+    background-color: transparent;
+}
+.notificationBtn a {
+    display: inline-block;
+    width: 185px;
+    background: #8b2be1;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notificationBtn {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+/* background: #e4e4e6; */
+/* 8b2be1 */
+@media (max-width:767px){
+    .ccFlex{
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 15px;
+    }
+    .ccItem{
+        width: 100%;
+    }
+    .notificationBtn {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+/*  =============================================== 
+    End Profile Notification
 =============================================== */
