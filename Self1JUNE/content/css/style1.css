@@ -2532,7 +2532,30 @@ ul.queRes li a span:first-child {
     background: #ffffff;
     height: 0;
 }
+.QaMenu .qaNav{
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    height: 0;
+}
 .QaMenu nav a{
+    text-decoration: none;
+    color: #0c1019;
+    display: block;
+    font-size: 18px;
+    /* transition: all 0.4s cubic-bezier(.22,.43,.35,1.5); */
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    /* text-align: center; */
+    border-bottom: 1px solid #b4ac97;
+}
+.QaMenu .qaNav a{
     text-decoration: none;
     color: #0c1019;
     display: block;
@@ -2548,6 +2571,10 @@ ul.queRes li a span:first-child {
 
 
 /* the nav height will be set to the height in pixels that would have for default, using height:auto won't work but you can put that value in pixels creating the slide*/
+.QaMenu #check.active ~ .qaNav{
+    height: auto;
+    background: #f7f8fa;
+}
 .QaMenu #check.active ~ nav{
     height: auto;
     background: #f7f8fa;
@@ -2556,11 +2583,22 @@ ul.queRes li a span:first-child {
     height: auto;
     background: #f7f8fa;
 }
+.QaMenu #check:checked ~ .qaNav{
+    height: auto;
+    background: #f7f8fa;
+}
+
 
 .QaMenu #check:checked ~ nav a{
     padding: 10px;
     opacity: 1;
     transform: scale(1);
+}
+.QaMenu #check:checked ~ .qaNav a{
+    padding: 10px;
+    opacity: 1;
+    transform: scale(1);
+    
 }
 .toggleContainer {
     position: relative;
@@ -2582,7 +2620,20 @@ ul.queRes li a span:first-child {
     border-radius: 3px;
     margin-right: 8px;
 }
+.qaNav .navNavigator .navLinkNavigator:before {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 1px solid #0c1019;
+    border-radius: 3px;
+    margin-right: 8px;
+}
 .qaNav .nav-tabs .nav-item.show .nav-link:before, .qaNav .nav-tabs .nav-link.active:before {
+    background-color: #964bf8;
+    border: 1px solid #964bf8;
+}
+.qaNav .navNavigator .navItemNavigator.show .navLinkNavigator:before, .qaNav .navNavigator .navLinkNavigator.active:before {
     background-color: #964bf8;
     border: 1px solid #964bf8;
 }
@@ -2595,12 +2646,57 @@ ul.queRes li a span:first-child {
     border-bottom: 1px solid transparent;
 }
 .qaNav .nav-tabs {
-    border-bottom: 1px solid transparent;
+border-bottom: 1px solid transparent;
 border-bottom: 1px solid #e0e3e5;
 margin-top: 10px;
 margin-top: 10px;
 margin: 0 20px;
 }
+
+ul.navNavigator.navTabsNavigator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid transparent;
+    /* border-bottom: 1px solid #e0e3e5; */
+    margin-top: 10px;
+    margin-top: 10px;
+    margin: 0 20px;
+}
+
+.navItemNavigator {
+    margin-bottom: -1px;
+    border-bottom: 1px solid transparent;
+    
+}
+
+.navLinkNavigator {
+    text-decoration: none;
+    color: #0c1019;
+    display: block;
+    font-size: 18px;
+    /* transition: all 0.4s cubic-bezier(.22,.43,.35,1.5); */
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    /* text-align: center; */
+    border: 0;
+}
+
+.QaMenu #check:checked ~ .navNavigatorv a {
+    padding: 10px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
 .ansMark {
     display: flex;
     flex-wrap: wrap;
@@ -2625,7 +2721,12 @@ margin: 0 20px;
 .qaNav .nav-tabs .nav-item.show .nav-link, .qaNav .nav-tabs .nav-link.active{
 background-color: transparent;
 }
-.ansMarkItem:first-child, .ansMarkItem:nth-child(2), .ansMarkItem:nth-child(3), .ansMarkItem:nth-child(5), .ansMarkItem:nth-child(6), .ansMarkItem:nth-child(8), .ansMarkItem:nth-child(9), .ansMarkItem:nth-child(12), .ansMarkItem:nth-child(14) {
+/* .ansMarkItem:first-child, .ansMarkItem:nth-child(2), .ansMarkItem:nth-child(3), .ansMarkItem:nth-child(5), .ansMarkItem:nth-child(6), .ansMarkItem:nth-child(8), .ansMarkItem:nth-child(9), .ansMarkItem:nth-child(12), .ansMarkItem:nth-child(14) {
+    background-color: #964bf8;
+    color: #fff;
+    border: 1px solid transparent;
+} */
+.ansMarkItem.active{
     background-color: #964bf8;
     color: #fff;
     border: 1px solid transparent;
@@ -2668,6 +2769,9 @@ background-color: transparent;
     .QaMenu nav a{
         font-size: 16px;
     }
+    .QaMenu .qaNav a{
+        font-size: 16px;
+    }
     .ansMarkItem{
         width: 35px;
         height: 37px;
@@ -2705,6 +2809,9 @@ background-color: transparent;
         font-size: 13px;
     }
     .QaMenu nav a{
+        font-size: 14px;
+    }
+    .QaMenu .qaNav a{
         font-size: 14px;
     }
     .ansMarkItem{
@@ -2835,6 +2942,14 @@ background-color: transparent;
             padding-bottom: 5px !important;
             padding-top: 5px !important;
         }
+        .QaMenu .qaNav a{
+            padding-bottom: 5px !important;
+            padding-top: 5px !important;
+            font-size: .8rem;
+        }
+        .QaMenu .navLinkNavigator {
+            font-size: .8rem;
+        }
         .QaMenu {
            
             box-shadow: 0 -5px 5px -5px #333;
@@ -2844,6 +2959,10 @@ background-color: transparent;
             width: 11px;
             height: 11px;
         }
+        .navItemNavigator {
+            width: 50%;
+        }
+        
         .ansMarkItem{
             margin-top: 0;
             width: 42px;
@@ -2974,7 +3093,7 @@ background-color: transparent;
     color: #fff;
     border: 1px solid transparent;
 }
-.ansMarkItem:nth-child(3){
+/* .ansMarkItem:nth-child(3){
     background-color: #fff;
     color: #0c1019;
     border: 1px solid transparent;
@@ -2983,7 +3102,7 @@ background-color: transparent;
     background-color: #0c1019;
     color: #fff;
     border: 1px solid transparent;
-}
+} */
 .stdSubmit {
     background: #9241ff;
     font-size: 15px !important;
@@ -3001,12 +3120,21 @@ background-color: transparent;
         font-size: 16px;
         padding: 0 5px !important;
     }
+    .QaMenu .qaNav.stdqaNav .nav-link {
+        font-size: 16px;
+        padding: 0 5px !important;
+    }
 }
 @media(min-width:768px) and (max-width:991px){
     .QaMenu nav.stdqaNav .nav-link {
         font-size: 14px;
         padding: 0 5px !important;
     }
+    .QaMenu .qaNav.stdqaNav .nav-link {
+        font-size: 14px;
+        padding: 0 5px !important;
+    }
+    
     .qaNav.stdqaNav .nav-tabs .nav-link:before {
         content: " ";
         width: 10px;
@@ -3205,8 +3333,10 @@ background-color: transparent;
     Ncert-Quiz Test Series
 =============================================== */
 ul.tslContainer {
-    list-style-type: decimal;
-    padding-left: 35px !important;
+    /* list-style-type: decimal;
+    padding-left: 35px !important; */
+    list-style-type: none;
+    padding-left: 15px !important;
     padding-right: 20px;
 }
 .tslflex {
@@ -3231,7 +3361,16 @@ ul.tslContainer {
 .testSeriesList p:first-child {
     font-size: 20px;
 }
-.tslSolAtt span {
+.testSeriesList a {
+    display: block;
+}
+
+.testSeriesList a p:last-child {
+    background: transparent;
+    color: #000;
+    padding: 0;
+}
+.tslSolAtt a {
     border: 1px solid #9241ff;
     background-color: transparent;
     padding: 5px 10px;
@@ -3243,7 +3382,7 @@ ul.tslContainer {
     max-width: 115px;
     width: 100%;
 }
-.tslSolAtt span {
+.tslSolAtt a {
     border: 1px solid #9241ff;
     background-color: transparent;
     padding: 5px 10px;
@@ -3259,7 +3398,7 @@ ul.tslContainer {
     
 }
 
-.tslSolAtt span:first-child{
+.tslSolAtt a:first-child{
     margin-right: 15px;
 }
 .tslSolAtt {
@@ -3268,11 +3407,27 @@ ul.tslContainer {
     justify-content: flex-end;
     text-align: center;
 }
-a.tslflex:hover span:last-child:hover {
+.tslflex:hover span:last-child:hover {
     background: #9241ff;
     color: #fff;
 }
-a.tslflex span:first-child {
+.tslSolAtt a:first-child {
+    border-color: #fa6425;
+    color: #fa6425;
+}
+.tslSolAtt a:first-child:first-child:hover {
+    background: #fa6425;
+    color: #fff;
+}
+.tslSolAtt a:last-child:hover {
+    background: #9241ff;
+    color: #fff;
+}
+.tslSolAtt a.buttonload:last-child:hover{
+    background-color: unset;
+    color: #9241ff;
+}
+.tslflex span:first-child {
     border-color: #fa6425;
     color: #fa6425;
 }
@@ -3280,21 +3435,22 @@ a.tslflex span:first-child {
     color: #9241ff !important;
     border-color: #9241ff !important;
 }
-.tslSolAtt.st span:hover{
+.tslSolAtt.st a:hover{
     background-color: #9241ff !important;
     color: #fff !important;
 }
-.tslSolAtt.st span.active {
+.tslSolAtt.st a.active {
     background-color: #9241ff !important;
     color: #fff !important;
+    border-color: #9241ff !important;
 }
 
-a.tslflex:hover .testSeriesList P:first-child {
+.tslflex:hover .testSeriesList P:first-child {
     color: #9241ff;
     text-decoration: underline;
 }
 
-a.tslflex .testSeriesList p {
+.tslflex .testSeriesList p {
     color: #000;
 }
 ul.tslContainer li {
@@ -3312,10 +3468,10 @@ ul.tslContainer li {
 ul.tslContainer li:last-child {
     border: navajowhite;
 }
-.tslSolAtt span:last-child {
+.tslSolAtt a:last-child {
     margin-right: 0;
 }
-a.tslflex .tslSolAtt span:first-child:hover {
+a.tslflex .tslSolAtt a:first-child:hover {
     background: #fa6425 ;
     color: #fff;
 }
@@ -3525,19 +3681,19 @@ span.LoginBtnI i {
     .tslSolAtt {
         display: block;
     }
-    a.tslflex .testSeriesList p {
+    .tslflex .testSeriesList p {
         font-size: 13px;
         font-weight: 500;
     }
-    a.tslflex .testSeriesList p:last-child {
+    .tslflex .testSeriesList p:last-child {
         font-size: 12px;
     }
-    .tslSolAtt span {
+    .tslSolAtt a {
         font-size: 13px;
         margin: 3px 0;
         padding: 2px 0;
     }
-    .tslSolAtt span:first-child {
+    .tslSolAtt a:first-child {
         margin-right: 0;
     }
     /* login Popup */
@@ -3939,6 +4095,7 @@ form.form.editProfileForm label {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    justify-content: space-between;
 }
 .profileEducatonNav .navItem {
     text-align: center;
@@ -3947,6 +4104,15 @@ form.form.editProfileForm label {
 .nav-pills.profileEducatonNav .navLink.active, .nav-pills.profileEducatonNav .show>.navLink {
     color: #fff !important;
     background-color: #9241ff;
+    
+}
+.profileEducatonNav .navLink.active, .profileEducatonNav .show>.navLink {
+    color: #fff !important;
+    background-color: #9241ff;
+    text-decoration: none;
+}
+.profileEducatonNav .navLink:hover{
+    text-decoration: none;
 }
 .profileEducatonNav .navItem .navLink {
     padding: 15px 0;
@@ -4130,7 +4296,16 @@ form.form.editProfileForm label {
     #main.MainMobileEdu{
         margin-top: 15px;
     }
-
+    .MainMobileEdu .cardWrapper #ssAcc3 .card-body{
+        padding: 0 15px !important;
+    }
+    .MainMobileEdu .cardWrapper #ssAcc3.collapse.show .card-body{
+        padding:0 15px !important;
+    }
+    
+    .selectClassCard .boardRow{
+        margin: 0 !important;
+    }
 }
 /*  =============================================== 
     End Ncert-ProfileEducation
@@ -4157,6 +4332,12 @@ form.form.editProfileForm label {
     justify-content: space-between;
 }
 .ccItem a {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: #000;
+}
+.npNotification .ccItem span{
     display: inline-block;
     width: 100%;
     cursor: pointer;
@@ -4257,3 +4438,199 @@ background: transparent;
 /*  =============================================== 
     End Profile Notification
 =============================================== */
+
+/*  =============================================== 
+     Social Media Marketing
+=============================================== */
+.smmBannerRT img {
+    position: unset;
+}
+.hssContent {
+    width: 75%;
+    margin: 30px auto;
+    margin-bottom: 0;
+}
+.hss {
+    box-shadow: 0px 14px 30px 1px rgb(211 44 88 / 50%);
+    margin: 30px 0;
+    text-transform: uppercase;
+    color: #d32c58;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 15px 0;
+}
+.hssSocialCard {
+    display: inline-block;
+    max-width: 160px;
+    width: 100%;
+    padding: 20px 15px 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-sizing: border-box;
+    margin: 0 1.2% 40px;
+    background: linear-gradient(#fff, #95f5ff);
+    border: 0.5px solid #ccfffe;
+    border-radius: 15px;
+}
+.hssIcon span:nth-child(2) {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    margin-top: 7px;
+}
+.hssSocialCardFB{
+    
+    background: linear-gradient(#fff, #b3d9fe);
+}
+.hssSocialCardPT{
+    
+    background: linear-gradient(#fff, #b3d9fe);
+}
+.hssSocialCardLN{
+    
+    background: linear-gradient(#fff, #b8f8ff);
+}
+.hssSocialCardPT{
+    
+    background: linear-gradient(#fff, #ffb6b7);
+    border-color: #ffe6e7;
+}
+.hssSocialCardIn{
+    
+    background: linear-gradient(#fff, #ffcafe);
+    border-color: #ffd4ff;
+}
+.hssSocialCardIn{
+    
+    background: linear-gradient(#fff, #ffd2ff);
+    border-color: #ffd2ff;
+}
+.hssSocialCardYou{
+    
+    background: linear-gradient(#fff, #fda49e);
+    border-color: #ffd4ff;
+}
+.hssSocialCardTg{
+    
+    background: linear-gradient(#fff, #cdfffd);
+    border-color: #cdfffd;
+}
+
+.hssSocial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hssIcon i,.hssIcon span {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hssIcon {
+    margin-bottom: 20px;
+}
+.hssIcon i {
+    width: 45px;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+    font-size: 25px;
+}
+.hssIcon span:last-child {
+    font-size: .6rem;
+}
+.hssInfo h3 {
+    width: 52%;
+    margin: 0 auto;
+    text-align: center;
+    color: #2e3c49;
+    font-weight: 600;
+    margin: 18px auto;
+    padding-top: 8px;
+}
+.smmBannerLT h3 {
+    font-size: 2.0rem;
+    color: #111419;
+    font-weight: 500;
+}
+
+.smmBannerLT p {
+    color: #9B9B9B;
+    font-size: 1.0rem;
+    margin-bottom: 0;
+    padding-right: 50px;
+}
+.smmBannerLT p:last-child{
+    padding-right: 0;
+}
+.hssInfo p {
+    color: #5e6166;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+@media (min-width:768px) and (max-width:991px){
+    .smmBannerLT h3 {
+        font-size: 1.2rem;
+    }
+    .smmBannerLT p {
+        color: #9B9B9B;
+        font-size: .8rem;
+    }
+    .hssInfo h3 {
+        width: 70%;
+        font-size: 1.7rem;
+    }
+    
+    .hssInfo p {
+        font-size: .8rem;
+    }
+}
+@media (max-width:767px){
+    .bannerLT {
+        margin-top: 15px;
+    }
+    
+    .smmBannerLT h3 {
+        font-size: 1.4rem;
+    }
+    
+    .smmBannerLT p {
+        font-size: .8rem;
+        padding-right: 0;
+    }
+    
+    .hssContent {
+        width: 100%;
+    }
+    
+    .hss {
+        font-size: .9rem;
+    }
+    
+    .hssInfo h3 {
+        width: 85%;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .hssInfo p {
+        font-size: .8rem;
+    }
+    .hssSocialCard {
+        
+        max-width: 130px;
+    }
+    .hssSocialCard{
+    padding: 20px 8px 0;
+    margin: 0 2% 40px;
+    margin-bottom: 10px;
+    }
+}
+/*  =============================================== 
+    End Social Media Marketing
+=============================================== */
+
