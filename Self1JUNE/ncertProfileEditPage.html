@@ -416,11 +416,25 @@
                 </div>
                 <!-- End Breadcrumb -->
                 <div class="profileWrapper">
-                    <div class="row">
+                    <div class="row profileWrapperRow">
                         <div class="col-sm-5 pdL profileEditlLT">
                             <!--left col-->
                             <div class="text-center profileDetailLT">
-                                <img src="content/images/profileImg.png" class=" rounded-circle img-thumbnail" alt="">
+                                <!-- <img src="content/images/profileImg.png" class=" rounded-circle img-thumbnail" alt=""> -->
+                                <div>
+                                    <div class="avatar-upload">
+                                        
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url(http://dennislabs.com:82/content/images/profileImg.png);">
+                                            </div>
+                                        </div>
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload" class="imgUploadB imgUploadBtn">Upload New Picture</label>
+                                            <label for="" class="imgUploadB imgDeleteBtn">DELETE</label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <h4>Monica</h4>
                                 <p>monica123@gmail.com</p>
                                 <h6>new delhi, india</h6>
@@ -444,7 +458,8 @@
                                                 <div class="col mb-3">
                                                     <div class="form-group"> <label>About Me</label><textarea
                                                             class="form-control txtareaColor" rows="5"
-                                                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's" style="color: #1d1d1d !important;"></textarea>
+                                                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+                                                            style="color: #1d1d1d !important;"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -452,48 +467,58 @@
                                                 <div class="col">
                                                     <div class="form-group"> <label>Email Id*</label> <input
                                                             class="form-control" type="text"
-                                                            placeholder="user@example.com" style="color: #1d1d1d !important;"></div>
+                                                            placeholder="user@example.com"
+                                                            style="color: #1d1d1d !important;"></div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group"> <label>Mobile No*</label>
-                                                            <input type="tel" class="form-control" placeholder="+91 1234567890" style="color: #1d1d1d !important;" name="telphone"  pattern="[0-9]{10}" 
-                                                            title="Ten digits code" required/>    
-                                                        </div>
+                                                        <input type="tel" class="form-control"
+                                                            placeholder="+91 1234567890"
+                                                            style="color: #1d1d1d !important;" name="telphone"
+                                                            pattern="[0-9]{10}" title="Ten digits code" required />
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                            <div class="row bRow">
                                                 <div class="col">
                                                     <div class="form-group"> <label for="birthday">Birthday:</label>
-                                                        <input type="date" id="birthday" name="birthday" class="form-control">
+                                                        <input type="date" id="birthday" name="birthday"
+                                                            class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="form-group radioGender"> 
+                                                    <div class="form-group radioGender">
                                                         <label>
                                                             Gender
-                                                          </label>
-                                                          <div class="radioCustom">
-                                                            <div class="custom-control custom-radio custom-control-inline">
-                                                                <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
-                                                                <label class="custom-control-label" for="customRadio"> radio 1</label>
-                                                              </div>
-                                                              <div class="custom-control custom-radio custom-control-inline">
-                                                                <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
-                                                                <label class="custom-control-label" for="customRadio2"> radio 2</label>
-                                                              </div>
-                                                          </div>
-                                                          
+                                                        </label>
+                                                        <div class="radioCustom">
+                                                            <div
+                                                                class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" class="custom-control-input"
+                                                                    id="customRadio" name="example" value="customEx">
+                                                                <label class="custom-control-label" for="customRadio">
+                                                                    Male</label>
+                                                            </div>
+                                                            <div
+                                                                class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" class="custom-control-input"
+                                                                    id="customRadio2" name="example" value="customEx">
+                                                                <label class="custom-control-label" for="customRadio2">
+                                                                    Female </label>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="row">
-                                        <div class="col d-flex "> <button class="btn btnSaveEditP"
-                                                type="submit">Save </button></div>
+                                        <div class="col d-flex "> <button class="btn btnSaveEditP" type="submit">Save
+                                            </button></div>
                                     </div>
                                 </form>
                                 <!-- end editProfile -->
@@ -597,6 +622,7 @@
     <script src="content/js/slick.min.js"></script>
     <script src="content/js/custom.js"></script>
     <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    
 
     <script>
         const togglePassword = document.querySelector('#togglePassword');
@@ -610,6 +636,27 @@
             this.classList.toggle('bi-eye');
         });
     </script>
+
+
+<!-- Image Upload Js -->
+<script>
+    
+function readURL(input) {
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+          jQuery('#imagePreview').css('background-image', 'url('+e.target.result +')');
+          jQuery('#imagePreview').hide();
+          jQuery('#imagePreview').fadeIn(650);
+      }
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+jQuery("#imageUpload").change(function() {
+  readURL(this);
+});
+</script>
+<!-- End Image Upload Js -->
 
 </body>
 
