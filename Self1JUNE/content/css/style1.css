@@ -22,6 +22,7 @@ img{
 }
 body{
     font-family: 'Poppins', sans-serif !important;
+    
 }   
 
 /* ====================================================================
@@ -113,7 +114,7 @@ body{
     color: #000;
 }
 a.mainMenu__list--link {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 14px;
     display: inline-block;
     padding: 12px 0;
@@ -184,7 +185,7 @@ a.mainMenu__list--link {
 
 .bannerLT {
     margin-top: 40px;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 .bannerLT h2{
     font-size: 2.5rem;
@@ -1391,15 +1392,21 @@ a.fa.fa-instagram {
         background: #f6f8fa;
         position: absolute;
         left: -20px;
-        height: 100%;
+        /* height: 100%; */
+        height: 95%;
         width: 20px;
+    }
+    .mainMenu__list.active .dropdownMenu{
+        position: unset;
+        border: unset !important;
     }
     .dropdownMenu:after {
         content: '';
         background: #f6f8fa;
         position: absolute;
         right: -10px;
-        height: 100%;
+        /* height: 100%; */
+        height: 95%;
         width: 10px;
     }
     .topHeader__mobileIcon {
@@ -4550,7 +4557,7 @@ background: transparent;
     margin: 18px auto;
     padding-top: 8px;
 }
-.smmBannerLT h3 {
+.smmBannerLT h1 {
     font-size: 2.0rem;
     color: #111419;
     font-weight: 500;
@@ -4573,7 +4580,7 @@ background: transparent;
     margin-bottom: 30px;
 }
 @media (min-width:768px) and (max-width:991px){
-    .smmBannerLT h3 {
+    .smmBannerLT h1 {
         font-size: 1.2rem;
     }
     .smmBannerLT p {
@@ -4594,7 +4601,7 @@ background: transparent;
         margin-top: 15px;
     }
     
-    .smmBannerLT h3 {
+    .smmBannerLT h1 {
         font-size: 1.4rem;
     }
     
@@ -4632,5 +4639,72 @@ background: transparent;
 }
 /*  =============================================== 
     End Social Media Marketing
+=============================================== */
+
+/*  =============================================== 
+    JEE Main Syllabus
+=============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+.jeeSyllabus {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+.h1-banner-title h1{
+    color: #fff;
+    background-color: #0085bd;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    padding-left: 3.8%;
+    font-size: 24px;
+    margin: 20px 0 15px;
+    font-family: 'Roboto', sans-serif;
+}
+p.p-banner-title {
+    font-family: Roboto,sans-serif;
+    font-size: .9rem;
+    line-height: 1.42857143;
+    color: #333;
+}
+.jSContainer{
+    border: solid 1px;
+    padding: 0px 5% 7px 2%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%);
+    margin: 17px 7% 20px;
+    width: fit-content;
+}
+.jSContainer ul li a {
+    color: #73ad21;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.jSContainer ul li a:hover {
+    color: #5d8e17;
+    text-decoration: underline;
+}
+
+.jSContainer ul>li {
+    list-style-type: disc;
+}
+
+.jeeSyllabusTable .table-bordered td, .jeeSyllabusTable .table-bordered th {
+    border: 1px solid #8f9087;
+}
+@media(max-width:767px){
+    .jeeSyllabus span {
+        display: block;
+        font-size: 17px !important;
+        max-width: 300px;
+        width: 100%;
+    }
+    
+    .jeeSyllabus {
+        margin: 10px 0 15px !important;
+    }
+}
+/*  =============================================== 
+    End JEE Main Syllabus
 =============================================== */
 
