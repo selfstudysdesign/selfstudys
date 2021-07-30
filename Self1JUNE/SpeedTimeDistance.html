@@ -627,7 +627,17 @@
     <script src="content/js/custom.js"></script>
 
 
+<script>
+    // for question navigator mobile adjustment
+const tabId = document.getElementById("check");
+const qWrap = document.getElementById("quesNavWrap");
+tabId.addEventListener("click", (e) => {
+  if (qWrap.classList.contains("activeNav")) {
+    qWrap.classList.remove("activeNav");
+  } else qWrap.classList.add("activeNav");
+});
 
+</script>
 
 </body>
 

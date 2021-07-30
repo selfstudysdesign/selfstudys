@@ -8,21 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="content/css/slick-theme.css" rel="stylesheet">
-    <link href="content/css/slick.css" rel="stylesheet">
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/slick-theme.css" rel="stylesheet" />
+    <link href="content/css/slick.css" rel="stylesheet" />
 
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- Show Hide Password Icon Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <!-- custom CSS -->
     <link rel="stylesheet" href="content/css/style.css">
     <link rel="stylesheet" href="content/css/style1.css">
+
+
 </head>
 
 <body>
     <!-- SelfStudy-Wrapper     -->
-    <div class="selfStudy_Wrapper qAWrapper">
+    <div class="selfStudy_Wrapper">
         <!-- Header Start -->
         <header class="headerr elfstudysHeader">
             <!-- Top-Header -->
@@ -33,11 +36,48 @@
                     <!-- <span class="topHeader__mobileIcon" onclick="handleNavClick('open')">☰</span> -->
                     <span class="topHeader__mobileIcon" onclick="handleNavClick('open')"><a href="#;"><img
                                 src="content/images/menuIcon.png" alt="" style="width: 25px;"></a></span>
-                    <form action="" class="topHeader__searchBar">
-                        <input type="text" class="topHeader__searchBar--input" placeholder="What you wan to learn?"
-                            name="search">
-                        <button type="submit" class="topHeader__searchBar--btn"><i class="fa fa-search"></i></button>
-                    </form>
+                    <div class="searchLoginRT">
+                        <form action="" class="topHeader__searchBar">
+                            <input type="text" class="topHeader__searchBar--input" placeholder="What you wan to learn?"
+                                name="search">
+                            <button type="submit" class="topHeader__searchBar--btn"><i
+                                    class="fa fa-search"></i></button>
+                        </form>
+
+                        <!--  Login Button -->
+                        <div class="text-center mt-4 loginHeaderBtn dropdownProfileHeader">
+                            <!-- User Profile  -->
+                            <div class="dropdown dropdown-Profile">
+                                <a href="#;" class="dropdownMenuButton 
+                                        dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="content/images/profilePic.png" alt="">
+                                    Monica
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="dropdown-item active">
+                                        <a
+                                            href="https://drive.google.com/drive/u/1/folders/1XIsWdth98HT0c7F35hNuH-Eg7RC-8Qdv">Profile</a>
+                                    <li class="dropdown-item">
+                                        <a href="">Profile</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="">Profile</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="">Profile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End User Profile -->
+                        </div>
+                    </div>
+
+                    <!-- End Login Button -->
+
+                    <!-- Login Popup -->
+
                 </div>
             </div>
             <!-- Main Menu -->
@@ -46,8 +86,7 @@
                     <a href="#;" class="navBar__logo"><img src="content/images/logo.png" class="navBar__logo--img"
                             alt="Logo Here"></a>
                     <ul class="mainMenu ">
-                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">NCERT Books &amp;
-                                Solutions</a>
+                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">NCERT Books & Solutions</a>
                             <div class=" dropdownMenu">
                                 <div class="row d-flex justify-content-center w-100 MenuRow">
                                     <div class="col-md-3 col-sm-6">
@@ -125,7 +164,7 @@
 
                             </div>
                         </li>
-                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">Books &amp; Solutions</a>
+                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">Books & Solutions</a>
                             <div class="dropdownMenu">
                                 <div class="row d-flex justify-content-center w-100 MenuRow">
                                     <div class="col-md-3 col-sm-6">
@@ -320,8 +359,7 @@
 
                             </div>
                         </li>
-                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">Scholarship &amp;
-                                Olympiad</a>
+                        <li class="mainMenu__list"><a href="#;" class="mainMenu__list--link">Scholarship & Olympiad</a>
                             <div class="dropdownMenu">
                                 <div class="row d-flex justify-content-center w-100 MenuRow">
                                     <div class="col-md-3 col-sm-6">
@@ -367,327 +405,239 @@
                 <a href="javascript:void(0)" class="navBar__closebtn" onclick="handleNavClick('close')">×</a>
             </nav>
         </header>
-        <!-- End Header  -->
-        <!-- Question Answer And Solution -->
-        <div class="stdContainer qasContainer">
+        <!-- NCERT Profile -->
+        <div class="ncert-wrapper ">
             <div class="container">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">CBSE Test Series 2021</a></li>
-                    <li class="breadcrumb-item active">Speed Time &amp; Distance</li>
-                </ul>
-                <div class="stdTestSeries quesAnsWrap qasWrap">
-                    <div class="row">
-                        <div class="col-md-8 qasCol8 ncertWrapperCol8 qasCol8">
-                            <!-- Qustion And Ans -->
-                            <div class="ncert-wrapper">
-                                <div class="QusAns">
-                                    <div class="container QusAnsContainer qasAnsContainer">
-                                        <ul class="QuesHeader">
-                                            <li>Speed Time &amp; Distance</li>
+                <!-- <div class="stdContainer qasContainer ncertPdfBreadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"> Education</li>
+                    </ul>
+                </div> -->
+                <!-- End Breadcrumb -->
 
-                                            <li>
-
-                                                <div class="progressTitle">
-                                                    Time: 02:22/10:00
-                                                </div>
-                                                <div id="progressBar">
-                                                    <div id="played"></div>
-                                                </div>
-
-                                            </li>
-
-                                            <li>Total:15</li>
-                                        </ul>
-                                        <!-- QuestionCard -->
-                                        <div class="card questionCard questionCard1">
-                                            <div class="queSNo">
-                                                <p>question 1</p>
-                                                <p>1.0/-0.5</p>
-                                            </div>
-                                            <div class="question">
-                                                A train with a uniform speed passes a platform, 122 metres long, in 17
-                                                seconds
-                                                and a
-                                                bridge,
-                                                210 metres long, in 25 seconds. The speed of the train is
-                                            </div>
-                                            <ul class="queRes">
-                                                <li><a href=""><span>A</span><span>46.5km/h</span></a></li>
-                                                <li><a href=""><span>B</span><span>37.5km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>37.6km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>39.6km/h</span></a></li>
-                                            </ul>
-                                            <div class="qaSol">
-                                                <h4>Solution:</h4>
-                                                <div class="qaOpt"><span>Answer: </span><span>Option A</span></div>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book. It has survived not
-                                                    only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged.</p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End QuestionCard -->
-                                        <!-- QuestionCard -->
-                                        <div class="card questionCard questionCard2">
-                                            <div class="queSNo">
-                                                <p>question 1</p>
-                                                <p>1.0/-0.5</p>
-                                            </div>
-                                            <div class="question">
-                                                A train with a uniform speed passes a platform, 122 metres long, in 17
-                                                seconds
-                                                and a
-                                                bridge,
-                                                210 metres long, in 25 seconds. The speed of the train is
-                                            </div>
-                                            <ul class="queRes">
-                                                <li><a href=""><span>A</span><span>46.5km/h</span></a></li>
-                                                <li><a href=""><span>B</span><span>37.5km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>37.6km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>39.6km/h</span></a></li>
-                                            </ul>
-                                            <div class="qaSol">
-                                                <h4>Solution:</h4>
-                                                <div class="qaOpt"><span>Answer: </span><span>Option A</span></div>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book. It has survived not
-                                                    only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged.</p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End QuestionCard -->
-                                        <!-- QuestionCard -->
-                                        <div class="card questionCard questionCard3">
-                                            <div class="queSNo">
-                                                <p>question 1</p>
-                                                <p>1.0/-0.5</p>
-                                            </div>
-                                            <div class="question">
-                                                A train with a uniform speed passes a platform, 122 metres long, in 17
-                                                seconds
-                                                and a
-                                                bridge,
-                                                210 metres long, in 25 seconds. The speed of the train is
-                                            </div>
-                                            <ul class="queRes">
-                                                <li><a href=""><span>A</span><span>46.5km/h</span></a></li>
-                                                <li><a href=""><span>B</span><span>37.5km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>37.6km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>39.6km/h</span></a></li>
-                                            </ul>
-                                            <div class="qaSol">
-                                                <h4>Solution:</h4>
-                                                <div class="qaOpt"><span>Answer: </span><span>Option A</span></div>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book. It has survived not
-                                                    only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged.</p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End QuestionCard -->
-                                        <!-- QuestionCard -->
-                                        <div class="card questionCard questionCard4">
-                                            <div class="queSNo">
-                                                <p>question 1</p>
-                                                <p>1.0/-0.5</p>
-                                            </div>
-                                            <div class="question">
-                                                A train with a uniform speed passes a platform, 122 metres long, in 17
-                                                seconds
-                                                and a
-                                                bridge,
-                                                210 metres long, in 25 seconds. The speed of the train is
-                                            </div>
-                                            <ul class="queRes">
-                                                <li><a href=""><span>A</span><span>46.5km/h</span></a></li>
-                                                <li><a href=""><span>B</span><span>37.5km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>37.6km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>39.6km/h</span></a></li>
-                                            </ul>
-                                            <div class="qaSol">
-                                                <h4>Solution:</h4>
-                                                <div class="qaOpt"><span>Answer: </span><span>Option A</span></div>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book. It has survived not
-                                                    only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged.</p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End QuestionCard -->
-                                        <!-- QuestionCard -->
-                                        <div class="card questionCard questionCard5">
-                                            <div class="queSNo">
-                                                <p>question 1</p>
-                                                <p>1.0/-0.5</p>
-                                            </div>
-                                            <div class="question">
-                                                A train with a uniform speed passes a platform, 122 metres long, in 17
-                                                seconds
-                                                and a
-                                                bridge,
-                                                210 metres long, in 25 seconds. The speed of the train is
-                                            </div>
-                                            <ul class="queRes">
-                                                <li><a href=""><span>A</span><span>46.5km/h</span></a></li>
-                                                <li><a href=""><span>B</span><span>37.5km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>37.6km/h</span></a></li>
-                                                <li><a href=""><span>A</span><span>39.6km/h</span></a></li>
-                                            </ul>
-                                            <div class="qaSol">
-                                                <h4>Solution:</h4>
-                                                <div class="qaOpt"><span>Answer: </span><span>Option A</span></div>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book. It has survived not
-                                                    only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged.</p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End QuestionCard -->
-                                        <div class="qasButton">
-                                            <a href="#;" class="submitTest stdSubmit">re-attampet</a>
-                                            <a href="#;" class="submitTest stdsolution">solution</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Qustion And Ans -->
-                        </div>
-                        <div class="col-md-4 qCol stdCol qasCol4 activeNav" id="quesNavWrap">
-                            <!-- Question-Navigator -->
-                            <div class="QaMenu stdCol">
-                                <div class="menu ">
-                                    <input type="checkbox" id="check" checked>
-                                    <div class="toggleHhead">
-                                        Questions Navigator
-                                    </div>
-                                    <label for="check" class="button">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </label>
-                                    <nav class="qaNav stdqaNav qasQaNav">
-                                        <!-- Nav tabs -->
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link rightOpt active" data-toggle="tab"
-                                                    href="#right">right</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link wrongOpt" data-toggle="tab" href="#wrong">wrong </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link skippedOpt" data-toggle="tab" href="#skipped">skipped
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                        <!-- Tab panes -->
-                                        <div class="tab-content std-Content">
-                                            <div id="right" class="container tab-pane active answeredPD"><br>
-                                                <form action="/action_page.php">
-                                                    <div class="ansMark">
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>1</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>2</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>3</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>4</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>5</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>6</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>7</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>8</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>9</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>10</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>11</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>12</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>13</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>14</span> </div>
-                                                        <div class="ansMarkItem ansMarkItemRht"><span>15</span> </div>
-
-                                                    </div>
-                                                    <a href="#;" class="submitTest stdSubmit">re-attampet</a>
-                                                    <a href="#;" class="submitTest stdsolution">re-attampet</a>
-                                                </form>
-                                            </div>
-                                            <div id="wrong" class="container tab-pane fade answeredPD"><br>
-                                                <form action="/action_page.php">
-                                                    <div class="ansMark">
-                                                        <div class="ansMarkItem"><span>1</span> </div>
-                                                        <div class="ansMarkItem"><span>2</span> </div>
-                                                        <div class="ansMarkItem"><span>3</span> </div>
-                                                        <div class="ansMarkItem"><span>4</span> </div>
-                                                        <div class="ansMarkItem"><span>5</span> </div>
-                                                        <div class="ansMarkItem"><span>6</span> </div>
-                                                        <div class="ansMarkItem"><span>7</span> </div>
-                                                        <div class="ansMarkItem"><span>8</span> </div>
-                                                        <div class="ansMarkItem"><span>9</span> </div>
-                                                        <div class="ansMarkItem"><span>10</span> </div>
-                                                        <div class="ansMarkItem"><span>11</span> </div>
-                                                        <div class="ansMarkItem"><span>12</span> </div>
-                                                        <div class="ansMarkItem"><span>13</span> </div>
-                                                        <div class="ansMarkItem"><span>14</span> </div>
-                                                        <div class="ansMarkItem"><span>15</span> </div>
-
-                                                    </div>
-                                                    <a href="#;" class="submitTest">submit</a>
-                                                </form>
-                                            </div>
-                                            <div id="skipped" class="container tab-pane fade answeredPD"><br>
-                                                <form action="/action_page.php">
-                                                    <div class="ansMark">
-                                                        <div class="ansMarkItem"><span>1</span> </div>
-                                                        <div class="ansMarkItem"><span>2</span> </div>
-                                                        <div class="ansMarkItem"><span>3</span> </div>
-                                                        <div class="ansMarkItem"><span>4</span> </div>
-                                                        <div class="ansMarkItem"><span>5</span> </div>
-                                                        <div class="ansMarkItem"><span>6</span> </div>
-                                                        <div class="ansMarkItem"><span>7</span> </div>
-                                                        <div class="ansMarkItem"><span>8</span> </div>
-                                                        <div class="ansMarkItem"><span>9</span> </div>
-                                                        <div class="ansMarkItem"><span>10</span> </div>
-                                                        <div class="ansMarkItem"><span>11</span> </div>
-                                                        <div class="ansMarkItem"><span>12</span> </div>
-                                                        <div class="ansMarkItem"><span>13</span> </div>
-                                                        <div class="ansMarkItem"><span>14</span> </div>
-                                                        <div class="ansMarkItem"><span>15</span> </div>
-
-                                                    </div>
-                                                    <a href="#;" class="submitTest">submit</a>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                    </nav>
-                                </div>
-                            </div>
-                            <!-- End Question-Navigator -->
-                        </div>
+                <!-- JEE Main Syllabus -->
+                <div class="jeeSyllabus">
+                    <div class="h1-banner-title">
+                        <h1>JEE Main Syllabus</h1>
                     </div>
+                    <p class="p-banner-title"><span style="font-weight: 400;">JEE Main syllabus for 2021 will most
+                            likely remain the same as
+                            the previous years. If there are any changes we will be updating them here. JEE Main
+                            syllabus for 2021 has been released by the National Testing Agency (NTA) on their website
+                            along with the new information brochure covering all the details of the exam. Students can
+                            go through the 2021 syllabus below.</span><span style="font-weight: 400;">&nbsp;</span></p>
+                    <div class="jSContainer">
+                        <p style="color: #800080; font-size: 19px; margin: 15px;">Table of Content</p>
+                        <ul>
+                            <li><a href="">JEE Main 2021 Paper 1 Syllabus (PCM)</a></li>
+                            <li><a href="">JEE Main 2021 Paper 1 Exam Pattern</a></li>
+                            <li><a href="">Important Topics &amp; Weightage – Physics</a></li>
+                            <li><a href="">Important Topics &amp; Weightage – Chemistry</a></li>
+                            <li><a href="">Important Topics &amp; Weightage – Maths</a></li>
+                            <li><a href="">JEE Main Paper 2 &amp; 3 Syllabus</a></li>
+                            <li><a href="">JEE Main Paper 2 &amp; 3 Exam Pattern</a></li>
+                            <li><a href="">Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+                    <div class="jeeSyllabus" style="margin: 30px 0; ">
+                        <span style="background-color: #813589; text-transform: uppercase; font-size: 25px; color: #fff; font-weight: 600; padding: 15px 50px 15px 30px; border-top-right-radius: 12px; border-bottom-right-radius: 32px;">jee main 2021 syllabus</span>
+                    </div>
+                    <!-- Table Physics-->
+                    <div class="table-responsive jeeSyllabusTable">
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <td rowspan="8" style="vertical-align: middle; background-color: #bee224;"><span style="writing-mode: vertical-lr; -ms-writing-mode: tb-rl; transform: rotate(180deg); font-weight: 600;
+                                    font-size: 20px;">Physics</span></td>
+                                <td rowspan="2" style=" background-color:#dcff85 ">section A- Theroy (80% Weightage)</td>
+                                <td>Physics</td>
+                                <td style=" background-color:#dcff85 ">low of motion</td>
+                                <td style="background-color:#f8ffdc">Rotational motion</td>
+                                <td style=" background-color:#dcff85 ">properties of solids & liquids</td>
+                                <td style="background-color:#f8ffdc">kinetic theory of gases</td>
+
+
+                            </tr>
+
+
+                            <tr>
+
+
+                                <td style="background-color:#f8ffdc">kinematics</td>
+                                <td style=" background-color:#dcff85 ">work, energy, & power</td>
+                                <td style="background-color:#f8ffdc">gravitation</td>
+                                <td style=" background-color:#dcff85 ">thermo dynamics</td>
+                                <td style="background-color:#f8ffdc">oscillations & waves </td>
+
+
+                            </tr>
+                            <tr>
+
+                                <td rowspan="2"></td>
+                                <td style=" background-color:#dcff85 ">electrostatics</td>
+                                <td style="background-color:#f8ffdc">magnetic effects of current & magnetism</td>
+                                <td style=" background-color:#dcff85 ">electromagnetic waves</td>
+                                <td style="background-color:#f8ffdc">dual nature of matter & radiation</td>
+                                <td style=" background-color:#dcff85 ">Physics & Measurement</td>
+                                <td rowspan="" style="background-color:#f8ffdc">electronic devices</td>
+
+                            </tr>
+                            <tr>
+
+
+                                <td style=" background-color:#dcff85 ">current electricty</td>
+                                <td rowspan="3" style="background-color:#f8ffdc">electro-magnetic induction & alternating current</td>
+                                <td rowspan="3" style=" background-color:#dcff85 ">optics</td>
+                                <td rowspan="3" style="background-color:#f8ffdc">atoms & nuclei</td>
+                                <td rowspan="3" style=" background-color:#dcff85 ">communication systems</td>
+
+
+                            </tr>
+                            <tr>
+
+                                <td rowspan="2" style=" background-color:#f8ffdc ">section A- Theroy (80% Weightage)</td>
+                                <td rowspan="2" style=" background-color:#dcff85 ">experimental skills</td>
+
+
+
+                            </tr>
+                            <tr>
+
+
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <!-- End Table -->
+                    <!-- Table Chemistry-->
+                    <div class="table-responsive jeeSyllabusTable">
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <td rowspan="8" style="vertical-align: middle; background-color: #ecadfb;"><span style="writing-mode: vertical-lr; -ms-writing-mode: tb-rl; transform: rotate(180deg); font-weight: 600;
+                                    font-size: 20px;">Chemistry</span></td>
+                                <td rowspan="2" style="background-color: #ecadfb;">1</td>
+                                <td style="background-color: #f5cdff;">Chemistry</td>
+                                <td style="background-color: #fae8ff">low of motion</td>
+                                <td style="background-color: #f5cdff;">Rotational motion</td>
+                                <td style="background-color: #fae8ff">properties of solids & liquids</td>
+                                <td style="background-color: #f5cdff;">kinetic theory of gases</td>
+
+
+                            </tr>
+                            <tr>
+
+
+                                <td style="background-color: #f5cdff;">kinematics</td>
+                                <td style="background-color: #fae8ff">work, energy, & power</td>
+                                <td style="background-color: #f5cdff;">gravitation</td>
+                                <td style="background-color: #fae8ff">thermo dynamics</td>
+                                <td style="background-color: #f5cdff;">oscillations & waves </td>
+
+
+                            </tr>
+                            <tr>
+
+                                <td rowspan="2" style="background-color: #f5cdff;">2</td>
+                                <td style="background-color: #fae8ff">electrostatics</td>
+                                <td style="background-color: #f5cdff;">magnetic effects of current & magnetism</td>
+                                <td style="background-color: #fae8ff">electromagnetic waves</td>
+                                <td style="background-color: #f5cdff;">dual nature of matter & radiation</td>
+
+
+                            </tr>
+                            <tr>
+
+
+                                <td style="background-color: #fae8ff">current electricty</td>
+                                <td rowspan="" style="background-color: #f5cdff;">electro-magnetic induction & alternating current</td>
+                                <td rowspan="" style="background-color: #fae8ff">optics</td>
+                                <td rowspan="" style="background-color: #f5cdff;">atoms & nuclei</td>
+                                <td rowspan="" style="background-color: #fae8ff">communication systems</td>
+
+
+                            </tr>
+                            <tr>
+
+                                <td rowspan="0"  style="background-color: #fae8ff;">section A- Theroy (80% Weightage)</td>
+                                <td rowspan="2" style="background-color: #f5cdff;">experimental skills</td>
+                                <td style="background-color: #fae8ff"></td>
+                                <td style="background-color: #f5cdff;"></td>
+                                <td style="background-color: #fae8ff"></td>
+                                <td style="background-color: #f5cdff;"></td>
+
+
+                            </tr>
+                            <tr>
+
+
+
+
+                            </tr>
+                            <tr>
+
+                                <td style="background-color: #f5cdff;">dijqerlwe</td>
+                                <td style="background-color: #fae8ff">dijqerlwe</td>
+                                <td style="background-color: #f5cdff;">dijqerlwe</td>
+                                <td style="background-color: #fae8ff">dijqerlwe</td>
+                                <td style="background-color: #f5cdff;">dijqerlwe</td>
+
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <!-- End Table -->
+                    <!-- Table Maths>-->
+                    <div class="table-responsive jeeSyllabusTable">
+                        <table class="table table-bordered">
+
+                            <tr>
+                               
+                                <td rowspan="2" style="vertical-align: middle; background-color: #feb66e;"><span style="writing-mode: vertical-lr; -ms-writing-mode: tb-rl; transform: rotate(180deg); font-weight: 600;
+                                    font-size: 20px;">Maths</span>
+                                </td>
+                                <td>kinetic theory of gases</td>
+                                <td style="background-color: #feb66e;">1</td>
+                                <td>Physics</td>
+                                <td style="background-color: #feb66e;">low of motion</td>
+                                <td>Rotational motion</td>
+                                <td style="background-color: #feb66e;">properties of solids & liquids</td>
+                                <td>kinetic theory of gases</td>
+
+
+                            </tr>
+                            <tr>
+                                
+                                <td>1</td>
+                                <td style="background-color: #feb66e;">Physics</td>
+                                <td>low of motion</td>
+                                <td style="background-color: #feb66e;">Rotational motion</td>
+                                <td ">properties of solids & liquids</td>
+                                <td style="background-color: #feb66e;">kinetic theory of gases</td>
+                                <td>kinetic theory of gases</td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <!-- End Table -->
                 </div>
+                <!-- End JEE Main Syllabus -->
             </div>
         </div>
-        <!-- End Question Answer And Solution -->
+        <!-- End NCERT Profile -->
         <!-- Footer Start -->
         <div class="footerContainer">
             <div class="footer1 footerTop">
                 <a href="#;"><img src="content/images/logo.png" alt=""></a>
                 <p>We are providing something unique, useful and most importantly fun. By giving students a tool to find
                     instant solutions to their doubts, we’re trying to make every student self-sufficient in practicing
-                    &amp;
+                    &
                     completing their homework</p>
                 <div class="footerContact">
                     <a class="phoneTag" href="tel:+91 8826312576">
@@ -701,7 +651,7 @@
             <div class="footer2 footerTop">
                 <h3>SOLUTIONS</h3>
                 <ul>
-                    <li><a href="">Books &amp; Solutions</a></li>
+                    <li><a href="">Books & Solutions</a></li>
                     <li><a href="">CBSE</a></li>
                     <li><a href="">NCERT Solutions</a>
                     </li>
@@ -736,7 +686,7 @@
             <div class="footer5 footerTop">
                 <h3>Follow Us</h3>
                 <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p> -->
+                </p> -->
                 <div class="footerSocial">
                     <a href="" class="fa fa-twitter"></a>
                     <a href="" class="fa fa-facebook"></a>
@@ -753,7 +703,7 @@
         <!-- End Footer Start -->
         <!-- CopyRight -->
         <div class="copyrht">
-            Copyright ©2021 All Rights Reserved, selfstudys.com
+            Copyright &copy;2021 All Rights Reserved, selfstudys.com
         </div>
         <!-- End CopyRight -->
 
@@ -762,8 +712,8 @@
 
     <!-- js files  -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
     <!-- Slick -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
@@ -773,22 +723,21 @@
     <script src="content/js/bootstrap.min.js"></script>
     <script src="content/js/slick.min.js"></script>
     <script src="content/js/custom.js"></script>
+    <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
 
     <script>
-        // for question navigator mobile adjustment
-        const tabId = document.getElementById("check");
-        const qWrap = document.getElementById("quesNavWrap");
-        tabId.addEventListener("click", (e) => {
-            if (qWrap.classList.contains("activeNav")) {
-                qWrap.classList.remove("activeNav");
-            } else qWrap.classList.add("activeNav");
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye / eye slash icon
+            this.classList.toggle('bi-eye');
         });
-
     </script>
-
-
 </body>
-
-
 
 </html>
